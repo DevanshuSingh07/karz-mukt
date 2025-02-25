@@ -62,6 +62,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      
 
       {/* Copyright & Branding */}
       <div className="text-center border-t border-white mt-12 pt-4 text-sm opacity-80">

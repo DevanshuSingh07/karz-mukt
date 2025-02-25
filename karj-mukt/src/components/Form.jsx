@@ -24,7 +24,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 50 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 1 }}
-      className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg"
+      className="max-w-lg mx-auto frame bg-white p-6 rounded-lg shadow-lg"
     >
       {/* <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -67,7 +67,7 @@ export default function ContactForm() {
           Send Message
         </Button>
       </form> */}
-      <iframe aria-label='KM-Contact-form' frameborder="0" style={{height:"500px",width:"99%",border:"none",}} src='https://forms.zohopublic.in/certifymyhealth/form/KMContactform/formperma/dmlSnwXsotzQjU5zGzcLluqHGqCoMvvKMxBK4P5L52Q'></iframe>
+      <iframe aria-label='KM-Contact-form' frameborder="0" style={{height:"500px",width:"99%",border:"none",}}src='https://forms.zohopublic.in/certifymyhealth/form/KMContactform/formperma/dmlSnwXsotzQjU5zGzcLluqHGqCoMvvKMxBK4P5L52Q'></iframe>
     </motion.div>
   );
 }

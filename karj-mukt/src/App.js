@@ -6,6 +6,7 @@ import { Routes, Route, Link} from 'react-router'
 import AboutUs from "./pages/AboutUs";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
 

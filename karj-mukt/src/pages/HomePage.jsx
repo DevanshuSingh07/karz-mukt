@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { FaBalanceScale, FaHandshake, FaShieldAlt, FaQuoteLeft } from "react-icons/fa";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
+import FAQSection from "../components/FAQSection";
+import { Link } from "react-router";
+import WhyChooseUs from "../components/WhyChooseUs";
+import ContactForm from "../components/Form";
+import ContactSection from "../components/ContactSection";
 
 export default function HomePage() {
   useEffect(() => {
@@ -44,6 +49,38 @@ export default function HomePage() {
           </Button>
         </motion.div>
       </section> */}
+      {/* offer section*/}
+      <section className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-16 px-6 md:px-12 lg:px-20 text-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="max-w-3xl mx-auto"
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          First Consultation at Just <span className="text-yellow-300">₹349!</span> Book Now
+        </h2>
+        <p className="text-lg md:text-xl mb-6 opacity-90">
+          Book a personalized debt assessment and legal consultation for just ₹349{" "}
+          <span className="line-through opacity-70">₹500</span>.
+        </p>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+        >
+          <Link
+            to="/book-consultation"
+            className="bg-yellow-400 text-blue-900 font-semibold py-3 px-6 md:px-8 rounded-full text-lg md:text-xl shadow-md hover:bg-yellow-500 transition-all duration-300"
+          >
+            Book Now
+          </Link>
+        </motion.div>
+      </motion.div>
+    </section>
+
+    {/*whychooseUs*/}
+    <WhyChooseUs/>
       
       {/* Services Section */}
       <section id="services" className="py-20 px-6 md:px-12 lg:px-20 bg-white text-center">
@@ -82,7 +119,7 @@ export default function HomePage() {
       </section>
       
       {/* FAQ Section */}
-      <section id="faq" className="py-20 px-6 md:px-12 lg:px-20 bg-white text-center">
+      {/* <section id="faq" className="py-20 px-6 md:px-12 lg:px-20 bg-white text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-12">Frequently Asked Questions</h2>
         <div className="text-lg max-w-3xl mx-auto">
           <p className="font-semibold">Q: How does debt settlement work?</p>
@@ -90,7 +127,9 @@ export default function HomePage() {
           <p className="font-semibold">Q: Will settling my debt affect my credit score?</p>
           <p>A: Debt settlement may impact your credit score, but we provide strategies to recover quickly.</p>
         </div>
-      </section>
+      </section> */}
+      <FAQSection/>
+      <ContactSection/>
     </div>
   );
 }

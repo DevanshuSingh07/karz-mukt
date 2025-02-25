@@ -8,9 +8,10 @@ export default function ServicesPage() {
   }, []);
 
   const packages = [
-    { title: "1 Hour Consultation", price: "₹500", description: "Get expert legal advice on handling debt situations." },
-    { title: "Monthly Plan", price: "₹5000", description: "We deal with recovery agents and provide legal guidance." },
-    { title: "Full Settlement Assistance", price: "₹15,000", description: "Comprehensive support for negotiating your debt settlement." },
+    { title: "Basic Consultation Package", price: "₹349 (Limited-Time Offer!)", description: "One-time payment. Personalized debt assessment, creditor harassment guidance, settlement options, and general legal advice." },
+    { title: "Debt Settlement & Financial Planning Package", price: "₹2,999", description: "Monthly services. Full debt assessment, creditor negotiations, customized financial strategy, and legal guidance." },
+    { title: "Legal Protection & Notice Handling Package", price: "₹4,999", description: "Monthly services. Legal response to notices, complaints against unethical recovery, legal representation, and financial institution dealings." },
+    { title: "Premium Debt Resolution & Legal Support Package", price: "₹9,999", description: "Monthly services. End-to-end debt settlement, creditor communication handling, legal representation, and ongoing expert consultation." },
   ];
 
   return (
@@ -40,28 +41,59 @@ export default function ServicesPage() {
 
       {/* Service Packages */}
       <section className="py-20 px-6 bg-white text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">Our Packages</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {packages.map((pkg, index) => (
-            <motion.div key={index} whileHover={{ scale: 1.05 }} className="p-6 shadow-md rounded-lg bg-[#F3F4F6] cursor-pointer">
-              <h3 className="text-xl font-semibold mb-2">{pkg.title}</h3>
-              <p className="text-lg text-[#1E3A8A] font-bold">{pkg.price}</p>
-              <p className="mt-2">{pkg.description}</p>
-              <Button className="mt-4 bg-[#0D9488] hover:bg-[#0B766E] text-white px-6 py-3 text-lg font-semibold rounded-lg shadow-md">
-                Book Now
-              </Button>
-            </motion.div>
-          ))}
-        </div>
+        <h2 className="text-3xl font-bold text-gray-800 mb-12">Our Packages – Affordable Debt Relief & Legal Support</h2>
+        <p className="text-lg max-w-4xl mx-auto text-gray-700 mb-8">
+          At Karz-Mukt, we offer affordable and transparent pricing to help you manage your debt settlement, creditor harassment, and legal issues. Choose the package that best suits your financial needs and get expert guidance from our debt resolution and legal professionals.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+  {packages.map((pkg, index) => (
+    <motion.div
+      key={index}
+      whileHover={{ scale: 1.08 }}
+      className="relative flex flex-col items-center border border-gray-300 rounded-2xl shadow-xl bg-white p-10 hover:shadow-2xl transition duration-300 w-full max-w-[400px] mx-auto"
+    >
+      {/* Orange Ribbon */}
+      <div className="absolute top-0 left-0 bg-orange-500 text-white text-xs font-semibold px-4 py-1 transform -rotate-45 -translate-x-4 translate-y-3 shadow-md">
+        Best Offer
+      </div>
+
+      {/* Header Section */}
+      <div className="w-full bg-[#0D9488] text-white text-center py-5 rounded-t-2xl">
+        <h3 className="text-3xl font-bold">{pkg.title}</h3>
+      </div>
+
+      {/* Price Section */}
+      <p className="text-4xl font-bold text-gray-900 mt-6">{pkg.price}</p>
+      <p className="text-gray-500 text-sm">per session/month</p>
+
+      {/* Feature List */}
+      <ul className="text-gray-700 text-lg space-y-3 my-8 list-none text-left w-full px-6">
+        {pkg.description.split("\n").map((point, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <span className="text-green-500 text-2xl">✔</span> {point}
+          </li>
+        ))}
+      </ul>
+
+      {/* CTA Button */}
+      <Button className="w-full bg-[#0D9488] hover:bg-[#0B766E] text-white py-4 text-xl font-semibold rounded-lg shadow-md transition-all duration-300">
+        Book Now
+      </Button>
+    </motion.div>
+  ))}
+</div>
+
+
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 px-6 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">Why Choose Us?</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-12">Why Choose Karz-Mukt?</h2>
         <div className="max-w-4xl mx-auto text-lg text-gray-700">
-          <p className="mb-4">We provide expert legal assistance to help you navigate the complexities of debt settlement.</p>
-          <p className="mb-4">Our team negotiates with banks and financial institutions to ensure you get the best possible outcome.</p>
-          <p>100% confidential, stress-free, and results-driven service.</p>
+          <p className="mb-4">✔ Affordable & Transparent Pricing – No hidden charges!</p>
+          <p className="mb-4">✔ Expert Debt & Legal Consultants – Professional support at every step</p>
+          <p className="mb-4">✔ Confidential & Secure Assistance – Your privacy is our priority</p>
+          <p>✔ Proven Debt Relief Strategies – Helping clients achieve financial freedom</p>
         </div>
       </section>
 
@@ -78,6 +110,15 @@ export default function ServicesPage() {
             <p className="mt-2 font-semibold">- Priya S.</p>
           </motion.div>
         </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-6 bg-blue-700 text-white text-center">
+        <h2 className="text-3xl font-bold mb-4">📞 Get Started Today!</h2>
+        <p className="text-lg max-w-2xl mx-auto mb-6">Choose your package and take the first step toward a debt-free life with Karz-Mukt!</p>
+        <Button className="bg-[#0D9488] hover:bg-[#0B766E] text-white px-6 py-3 text-lg font-semibold rounded-lg shadow-md">
+          Get Free Consultation
+        </Button>
       </section>
     </div>
   );
