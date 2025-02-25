@@ -1,9 +1,9 @@
 
-import ServicesPage from "./components/pages/ServicePage";
-import HomePage from "./components/pages/HomePage";
+import ServicesPage from "./pages/ServicePage";
+import HomePage from "./pages/HomePage";
 import ContactForm from "./components/Form";
 import { Routes, Route, Link} from 'react-router'
-import AboutUs from "./components/pages/AboutUs";
+import AboutUs from "./pages/AboutUs";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
