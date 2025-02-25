@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaBalanceScale, FaHandshake, FaShieldAlt, FaQuoteLeft } from "react-icons/fa";
-import Button from "../Button";
-import Carousel from "../Carousel";
+import Button from "../components/Button";
+import Carousel from "../components/Carousel";
 
 export default function HomePage() {
   useEffect(() => {
