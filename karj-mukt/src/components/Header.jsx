@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router";// Make sure to add an animated dragon image in your assets folder
+import logo from "../assets/logo.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,18 @@ export default function Header() {
       }`}
     >
       <div className="relative max-w-8xl mx-auto flex justify-between items-center px-6">
-        {/* Dragon Animation */}
-       
-        {/* Logo */}
-        <motion.div
+        {/* logo */}
+        <div className="logobox gap-4 flex flex-row">
+        <motion.div 
+  initial={{ opacity: 0, y: -20 }} 
+  animate={{ opacity: 1, y: 0 }} 
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  className="flex items-center justify-center"
+>
+  <img src={logo} alt="Karz-Mukt Logo" className="h-12 w-auto -mt-2 " />
+</motion.div>
+         {/* name */}
+         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -36,6 +45,8 @@ export default function Header() {
             <span>Karz</span><span className="hover:text-[#0D9488]">Mukt</span>
           </Link>
         </motion.div>
+        </div>
+       
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 text-lg font-medium">
