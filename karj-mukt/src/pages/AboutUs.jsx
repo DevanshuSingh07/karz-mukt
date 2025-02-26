@@ -3,7 +3,7 @@ import { FaUsers, FaAward, FaShieldAlt, FaQuestionCircle } from "react-icons/fa"
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-[#F3F4F6] text-gray-900">
+    <div className={`min-h-screen  text-gray-9001`} style={{backgroundImage:"url('/assets/contact1.png')"}}>
       
       {/* Hero Section */}
       <section className="relative h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/images/about-hero.jpg')" }}>

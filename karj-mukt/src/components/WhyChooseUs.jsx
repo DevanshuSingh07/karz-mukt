@@ -26,6 +26,11 @@ const features = [
     icon: <FaDollarSign size={28} />,
     title: "Affordable & Confidential",
     desc: "We offer cost-effective services while ensuring complete confidentiality and trust."
+  },
+  {
+    icon: <FaDollarSign size={28} />,
+    title: "Affordable & Confidential",
+    desc: "We offer cost-effective services while ensuring complete confidentiality and trust."
   }
 ];
 
