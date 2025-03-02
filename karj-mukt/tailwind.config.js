@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens:{
-        "xsm":"375px"
+        "xsm":"375px",
+        "xlg":"1340px"
       },
       borderRadius: {
         'none': '0',
@@ -15,7 +16,12 @@ module.exports = {
         'lg': '0.5rem',
         'full': '9999px',
         'large': '30px',
+      },
+      colors:{
+        'blu':'#1E3A8A',
+        'grn':'#0D9488'
       }
+    
     },
   },
   plugins: [],

@@ -1,7 +1,6 @@
 
 import ServicesPage from "./pages/ServicePage";
 import HomePage from "./pages/HomePage";
-import ContactForm from "./components/Form";
 import { Routes, Route, Link} from 'react-router'
 import AboutUs from "./pages/AboutUs";
 import Header from "./components/Header";
@@ -9,8 +8,20 @@ import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Testimonials from "./components/Testimonials";
 import ContactUs from "./pages/ContactUs";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+import { initGA, logPageView } from "./analytics";
+import Sitemap from "./pages/Sitemap";
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+    logPageView(location.pathname);
+  }, [location]);
+
   return (
     
     <div className="min-h-screen flex flex-col">
@@ -36,6 +47,10 @@ export default function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/Testimonials" element={<Testimonials />} />
           <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/Terms" element={<TermsAndConditions/>} />
+          <Route path="/sitemap" element={<Sitemap/>} />
+
+
         </Routes>
       </main>
 

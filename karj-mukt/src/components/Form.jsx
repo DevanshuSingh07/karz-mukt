@@ -24,7 +24,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 50 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 1 }}
-      className="frame bg-white overflow-auto p-6 rounded-large border-solid- shadow-lg"
+      className="frame bg-white overflow-auto p-6 md rounded-large xsm:w-[370px] md:w-[500px] md:border-solid md:border-[#0D9488] md:border-4 z-10 shadow-lg"
     >
       {/* <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Contact Us</h2>
       <form onSubmit={handleSubmit} className="space-y-4">

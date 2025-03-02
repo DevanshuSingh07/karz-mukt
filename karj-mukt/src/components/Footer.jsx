@@ -48,7 +48,7 @@ export default function Footer() {
             <li><Link to="/faqs" className="hover:text-[#0D9488] transition-all duration-300">FAQs</Link></li>
             <li><Link to="/blog" className="hover:text-[#0D9488] transition-all duration-300">Debt Management Tips</Link></li>
             <li><Link to="/privacy-policy" className="hover:text-[#0D9488] transition-all duration-300">Privacy Policy</Link></li>
-            <li><Link to="/terms" className="hover:text-[#0D9488] transition-all duration-300">Terms & Conditions</Link></li>
+            <li><Link to="/Terms" className="hover:text-[#0D9488] transition-all duration-300">Terms & Conditions</Link></li>
           </ul>
         </div>
 

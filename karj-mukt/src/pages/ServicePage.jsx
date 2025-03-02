@@ -8,10 +8,10 @@ export default function ServicesPage() {
   }, []);
 
   const packages = [
-    { title: "Basic Consultation Package", price: "₹349 (Limited-Time Offer!)", description: "One-time payment. Personalized debt assessment, creditor harassment guidance, settlement options, and general legal advice." },
-    { title: "Debt Settlement & Financial Planning Package", price: "₹2,999", description: "Monthly services. Full debt assessment, creditor negotiations, customized financial strategy, and legal guidance." },
-    { title: "Legal Protection & Notice Handling Package", price: "₹4,999", description: "Monthly services. Legal response to notices, complaints against unethical recovery, legal representation, and financial institution dealings." },
-    { title: "Premium Debt Resolution & Legal Support Package", price: "₹9,999", description: "Monthly services. End-to-end debt settlement, creditor communication handling, legal representation, and ongoing expert consultation." },
+    { title: "Basic Consultation Package", price: "₹349/- (Limited-Time Offer!)", description: "One-time payment, Personalized debt assessment, creditor harassment guidance, settlement options, and general legal advice." },
+    { title: "Debt Settlement & Financial Planning Package", price: "₹2,999/-", description: "Handles all call and WhatsApp messages from creditors, ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process" },
+    { title: "Legal Protection & Notice Handling Package", price: "₹4,999/-", description: " Handles all calls and WhatsApp messages from creditors,⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process, ⁠Additionally a paralegal will be assigned to your case to reply to notices as and when you receive them, followed by one 30-minute consultation with our esteemed panel lawyer." },
+    { title: "Premium Debt Resolution & Legal Support Package", price: "₹9,999/-", description: "Handles all calls and WhatsApp messages from creditors, ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process, ⁠Additionally, a paralegal will be assigned to your case to reply to notices as you receive them, followed by one 30-minute consultation with our panel lawyer, Handles all negotiations with creditors and secures final settlement offers." },
   ];
 
   return (
@@ -45,12 +45,12 @@ export default function ServicesPage() {
         <p className="text-lg max-w-4xl mx-auto text-gray-700 mb-8">
           At Karz-Mukt, we offer affordable and transparent pricing to help you manage your debt settlement, creditor harassment, and legal issues. Choose the package that best suits your financial needs and get expert guidance from our debt resolution and legal professionals.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xlg:grid-cols-4 gap-12 mx-auto">
   {packages.map((pkg, index) => (
     <motion.div
       key={index}
       whileHover={{ scale: 1.08 }}
-      className="relative flex flex-col items-center border border-gray-300 rounded-2xl shadow-xl bg-white p-10 hover:shadow-2xl transition duration-300 w-full max-w-[400px] mx-auto"
+      className="relative md:h-auto flex flex-col items-center border border-gray-300 rounded-2xl shadow-xl bg-white p-8 hover:shadow-2xl transition duration-300 w-full max-w-[450px] mx-auto"
     >
       {/* Orange Ribbon */}
       <div className="absolute top-0 left-0 bg-orange-500 text-white text-xs font-semibold px-4 py-1 transform -rotate-45 -translate-x-4 translate-y-3 shadow-md">
@@ -59,7 +59,7 @@ export default function ServicesPage() {
 
       {/* Header Section */}
       <div className="w-full bg-[#0D9488] text-white text-center py-5 rounded-t-2xl">
-        <h3 className="text-3xl font-bold">{pkg.title}</h3>
+        <h3 className="text-2xl font-bold">{pkg.title}</h3>
       </div>
 
       {/* Price Section */}
@@ -67,16 +67,16 @@ export default function ServicesPage() {
       <p className="text-gray-500 text-sm">per session/month</p>
 
       {/* Feature List */}
-      <ul className="text-gray-700 text-lg space-y-3 my-8 list-none text-left w-full px-6">
-        {pkg.description.split("\n").map((point, i) => (
+      <ul className="text-gray-500 text-sm space-y-3 my-8 mb-16 list-none text-left w-full px-6">
+        {pkg.description.split(",").map((point, i) => (
           <li key={i} className="flex items-start gap-3">
-            <span className="text-green-500 text-2xl">✔</span> {point}
+            <span className="color-grn text-lg">✔</span> {point}
           </li>
         ))}
       </ul>
 
       {/* CTA Button */}
-      <Button className="w-full bg-[#0D9488] hover:bg-[#0B766E] text-white py-4 text-xl font-semibold rounded-lg shadow-md transition-all duration-300">
+      <Button className="w-[90%] bg-[#0D9488]  absolute bottom-2 hover:bg-[#0B766E] text-white py-2 text-xl font-semibold rounded-lg shadow-md transition-all duration-300">
         Book Now
       </Button>
     </motion.div>
