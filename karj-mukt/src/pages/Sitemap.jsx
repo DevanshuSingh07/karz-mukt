@@ -6,7 +6,6 @@ const Sitemap = () => {
   return (
     <div className="p-10 text-gray-900 bg-gray-100 min-h-screen">
       <Helmet>
-        <title>Sitemap - Your Website</title>
         <meta name="description" content="Find all the important pages of our website easily with our sitemap." />
         <script type="application/ld+json">
           {JSON.stringify({

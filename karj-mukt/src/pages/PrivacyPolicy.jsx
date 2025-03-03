@@ -93,8 +93,8 @@ export default function PrivacyPolicy() {
       <h2 className="text-xl font-semibold mt-6 text-[#0D9488]">8. Contact Us</h2>
       <p className="mt-2">For any questions or concerns regarding your privacy, please contact:</p>
       <ul className="list-disc list-inside text-gray-300">
-        <li>📧 Email: [Your Support Email]</li>
-        <li>📞 Phone: [Your Support Number]</li>
+        <li>📧 Email: [********]</li>
+        <li>📞 Phone: [*********]</li>
       </ul>
       
       <h2 className="text-xl font-semibold mt-6 text-[#0D9488]">9. Disclaimer</h2>

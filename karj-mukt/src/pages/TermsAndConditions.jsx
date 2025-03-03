@@ -14,7 +14,7 @@ const TermsAndConditions = () => {
         <h1 className="text-4xl font-bold text-center text-blue-700 mb-6 flex items-center justify-center">
           <FaFileContract className="mr-3" /> Terms & Conditions
         </h1>
-        <p className="text-center text-gray-600 mb-6">Effective Date: [Insert Date]</p>
+        {/* <p className="text-center text-gray-600 mb-6">Effective Date: [Insert Date]</p> */}
         
         <div className="space-y-6">
           <section>

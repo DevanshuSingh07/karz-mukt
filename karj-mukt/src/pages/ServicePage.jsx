@@ -3,9 +3,7 @@ import { motion } from "framer-motion";
 import Button from "../components/Button";
 
 export default function ServicesPage() {
-  useEffect(() => {
-    document.title = "Our Services - Debt Solutions";
-  }, []);
+ 
 
   const packages = [
     { title: "Basic Consultation Package", price: "₹349/- (Limited-Time Offer!)", description: "One-time payment, Personalized debt assessment, creditor harassment guidance, settlement options, and general legal advice." },
