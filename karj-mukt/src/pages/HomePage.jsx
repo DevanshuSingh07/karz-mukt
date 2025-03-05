@@ -11,9 +11,7 @@ import ContactSection from "../components/ContactSection";
 import Testimonials from "../components/Testimonials";
 
 export default function HomePage() {
-  useEffect(() => {
-    document.title = "KarzMukt - Settle Your Debts Legally";
-  }, []);
+  
   
   return (
     <div className="relative min-h-screen bg-[#F3F4F6] text-gray-900">

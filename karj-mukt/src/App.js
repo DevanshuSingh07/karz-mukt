@@ -28,9 +28,9 @@ export default function App() {
 
 
   const titles = {
-    "/": "KarzMukt - Settle Your Debts Legally",
+    "/": "KarzMukt - Debt Solution Settle Your Debts Legally",
     "/aboutUs": "About Us - Empowering Financial Freedom | Karz-Mukt",
-    "/services": "Our Services - Debt Solutions",
+    "/services": "Our Services - Debt Solutions ",
     "/contact": "Contact Us - Get Expert Debt Solutions | Karz-Mukt",
     "/privacy-policy": "Your Data, Your Trust | Karz-Mukt",
     "/terms": "Know Your Rights & Responsibilities | Karz-Mukt",
@@ -55,8 +55,8 @@ export default function App() {
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/terms" element={<TermsAndConditions/>} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/terms&conditions" element={<TermsAndConditions/>} />
           <Route path="/sitemap" element={<Sitemap/>} />
 
 
