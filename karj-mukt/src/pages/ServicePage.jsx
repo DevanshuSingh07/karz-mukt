@@ -68,7 +68,7 @@ export default function ServicesPage() {
       <ul className="text-gray-500 text-sm space-y-3 my-8 mb-16 list-none text-left w-full px-6">
         {pkg.description.split(",").map((point, i) => (
           <li key={i} className="flex items-start gap-3">
-            <span className="color-grn text-lg">✔</span> {point}
+            <span className="color-grn text-4xl">✔</span> {point}
           </li>
         ))}
       </ul>

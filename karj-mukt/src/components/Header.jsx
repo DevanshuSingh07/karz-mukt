@@ -27,14 +27,15 @@ export default function Header() {
       <div className="relative max-w-8xl mx-auto flex justify-between items-center px-6">
         {/* logo */}
         <div className="logobox gap-4 flex flex-row">
-        <motion.div 
+        <motion.a 
   initial={{ opacity: 0, y: -20 }} 
   animate={{ opacity: 1, y: 0 }} 
   transition={{ duration: 0.8, ease: "easeOut" }}
   className="flex items-center justify-center"
+  href="/"
 >
   <img src={logo} alt="Karz-Mukt Logo" className="h-12 w-auto -mt-2 " />
-</motion.div>
+</motion.a>
          {/* name */}
          <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

@@ -121,9 +121,9 @@ export default function Carousel() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <button className="bg-[#0D9488] hover:bg-[#0B766E] text-white px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-semibold rounded-md shadow-md">
-            Get Free Consultation
-          </button>
+          <a href="https://forms.zohopublic.in/certifymyhealth/form/ApplicationForm/formperma/N5Ov9DqCVOwaGgAPkEuGqPQl3KKCW4EiQNCTf_nAiv0" className="bg-[#0D9488] hover:bg-[#0B766E] text-white px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-semibold rounded-md shadow-md">
+            Book Consultation
+          </a>
         </motion.div>
       </section>
     </div>
