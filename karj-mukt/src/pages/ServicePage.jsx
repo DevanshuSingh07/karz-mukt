@@ -1,15 +1,16 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "../components/Button";
+import SEO from "../components/Seo";
 
 export default function ServicesPage() {
  
 
   const packages = [
-    { title: "Basic Consultation Package", price: "₹349/- (Limited-Time Offer!)", description: "One-time payment, Personalized debt assessment, creditor harassment guidance, settlement options, and general legal advice." },
-    { title: "Debt Settlement & Financial Planning Package", price: "₹2,999/-", description: "Handles all call and WhatsApp messages from creditors, ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process" },
-    { title: "Legal Protection & Notice Handling Package", price: "₹4,999/-", description: " Handles all calls and WhatsApp messages from creditors,⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process, ⁠Additionally a paralegal will be assigned to your case to reply to notices as and when you receive them, followed by one 30-minute consultation with our esteemed panel lawyer." },
-    { title: "Premium Debt Resolution & Legal Support Package", price: "₹9,999/-", description: "Handles all calls and WhatsApp messages from creditors, ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process, ⁠Additionally, a paralegal will be assigned to your case to reply to notices as you receive them, followed by one 30-minute consultation with our panel lawyer, Handles all negotiations with creditors and secures final settlement offers." },
+    { title: "Basic Consultation Package", price: "₹349/- (Limited-Time Offer!)", description: "One-time payment, Personalized debt assessment| creditor harassment guidance| settlement options and general legal advice." },
+    { title: "Debt Settlement & Financial Planning Package", price: "₹2,999/-", description: "Handles all call and WhatsApp messages from creditors| ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process" },
+    { title: "Legal Protection & Notice Handling Package", price: "₹4,999/-", description: " Handles all calls and WhatsApp messages from creditors| ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process ⁠Additionally a paralegal will be assigned to your case to reply to notices as and when you receive them followed by one 30-minute consultation with our esteemed panel lawyer." },
+    { title: "Premium Debt Resolution & Legal Support Package", price: "₹9,999/-", description: "Handles all calls and WhatsApp messages from creditors, ⁠Provides personal support with a dedicated buddy who will keep you informed and offer friendship throughout the process| A paralegal will be assigned to your case to reply to notices as you receive them followed by one 30-minute consultation with our panel lawyer| Handles all negotiations with creditors and secures final settlement offers." },
   ];
 
   return (
@@ -51,9 +52,9 @@ export default function ServicesPage() {
       className="relative md:h-auto flex flex-col items-center border border-gray-300 rounded-2xl shadow-xl bg-white p-8 hover:shadow-2xl transition duration-300 w-full max-w-[450px] mx-auto"
     >
       {/* Orange Ribbon */}
-      <div className="absolute top-0 left-0 bg-orange-500 text-white text-xs font-semibold px-4 py-1 transform -rotate-45 -translate-x-4 translate-y-3 shadow-md">
+     { index == 2&& <div className="absolute top-0 left-0 bg-orange-500 text-white text-xs font-semibold px-4 py-1 transform -rotate-45 -translate-x-4 translate-y-3 shadow-md">
         Best Offer
-      </div>
+      </div>}
 
       {/* Header Section */}
       <div className="w-full bg-[#0D9488] text-white text-center py-5 rounded-t-2xl">
@@ -66,7 +67,7 @@ export default function ServicesPage() {
 
       {/* Feature List */}
       <ul className="text-gray-500 text-sm space-y-3 my-8 mb-16 list-none text-left w-full px-6">
-        {pkg.description.split(",").map((point, i) => (
+        {pkg.description.split("|").map((point, i) => (
           <li key={i} className="flex items-start gap-3">
             <span className="color-grn text-4xl">✔</span> {point}
           </li>
@@ -118,6 +119,7 @@ export default function ServicesPage() {
           Get Free Consultation
         </Button>
       </section>
+      <SEO/>
     </div>
   );
 }

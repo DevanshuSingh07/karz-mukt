@@ -1,14 +1,13 @@
-import { useEffect } from "react";
+
 import { motion } from "framer-motion";
 import { FaBalanceScale, FaHandshake, FaShieldAlt, FaQuoteLeft } from "react-icons/fa";
-import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import FAQSection from "../components/FAQSection";
 import { Link } from "react-router";
 import WhyChooseUs from "../components/WhyChooseUs";
-import ContactForm from "../components/Form";
 import ContactSection from "../components/ContactSection";
 import Testimonials from "../components/Testimonials";
+import SEO from "../components/Seo";
 
 export default function HomePage() {
   
@@ -85,7 +84,7 @@ export default function HomePage() {
      <ContactSection/>
      
       <FAQSection/>
-      
+      <SEO/>
     </div>
   );
 }

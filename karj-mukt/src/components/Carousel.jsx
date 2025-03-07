@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSwipeable } from "react-swipeable";
+import { logEvent } from "../analytics";
 
 const images = [
   "img1.webp",
@@ -121,7 +122,9 @@ export default function Carousel() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <a href="https://forms.zohopublic.in/certifymyhealth/form/ApplicationForm/formperma/N5Ov9DqCVOwaGgAPkEuGqPQl3KKCW4EiQNCTf_nAiv0" className="bg-[#0D9488] hover:bg-[#0B766E] text-white px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-semibold rounded-md shadow-md">
+          <a href="https://forms.zohopublic.in/certifymyhealth/form/ApplicationForm/formperma/N5Ov9DqCVOwaGgAPkEuGqPQl3KKCW4EiQNCTf_nAiv0"
+          onClick={logEvent("Main_form","button_clicked","onboard_form")}
+          className="bg-[#0D9488] hover:bg-[#0B766E] text-white px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-semibold rounded-md shadow-md">
             Book Consultation
           </a>
         </motion.div>

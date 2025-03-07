@@ -1,13 +1,17 @@
 import { motion } from "framer-motion";
 import { FaUsers, FaAward, FaShieldAlt, FaQuestionCircle } from "react-icons/fa";
+import bgimg from '../assets/about.png'
+import SEO from "../components/Seo";
 
 export default function AboutUs() {
   return (
-    <div className={`min-h-screen  text-gray-9001`} style={{backgroundImage:"url('/assets/contact1.png')"}}>
+    
+    <div className={`min-h-screen  text-gray-9001`}>
+      
       
       {/* Hero Section */}
-      <section className="relative h-screen flex justify-center items-center bg-cover bg-center" style={{ backgroundImage: "url('/images/about-hero.jpg')" }}>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <section className="relative h-screen flex justify-center items-center bg-cover bg-center" style={{backgroundImage:`url(${bgimg})`}}>
+        <div className="absolute inset-0 bg-opacity-50 "  ></div>
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }} 
           animate={{ opacity: 1, scale: 1 }} 
@@ -116,6 +120,7 @@ export default function AboutUs() {
           Get a Free Consultation
         </button>
       </section>
+      <SEO/>
 
     </div>
   );
